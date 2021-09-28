@@ -3,10 +3,10 @@
 ## nomes
 
 ## Login 
-![](https://github.com/Romenildo/ProjetoTDIG/blob/master/imgsGit/login.JPG)
+![]( https://github.com/Romenildo/ProjetoTDIG/blob/master/imgsGit/login.JPG)
 
 ## Register
-![](https://github.com/Romenildo/ProjetoTDIG/blob/master/imgsGit/register.JPG)
+![]( https://github.com/Romenildo/ProjetoTDIG/blob/master/imgsGit/register.JPG)
 
 ## Home após Login Professor
 ![](https://github.com/Romenildo/ProjetoTDIG/blob/master/imgsGit/home.JPG)
