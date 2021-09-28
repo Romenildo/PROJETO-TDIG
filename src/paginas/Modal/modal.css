@@ -37,6 +37,10 @@
     border: none;
     border-radius: 5px;
     text-decoration: none;
+    height: 3.5rem;
+    width: 106%;
+    margin: -6px -12px;
+    font-size: 1.2rem;
 }
 
 .close-Btn:hover, .Btn:hover {
@@ -46,8 +50,57 @@
 
 .descricao {
     margin: 10px;
-    border: 1px solid rgba(0, 0, 0, .25);
+    border-bottom: 2px solid rgba(0, 0, 0, .25);
 }
-.projetos{
+
+.header{
+    background: #00cc99;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-bottom: 5px groove rgba(0, 0, 0, .25);
+    padding: 0rem 1rem;
+}
+.info{
+    padding: 1rem;
+    height: 30vh;
+    border: 2px solid rgba(0, 0, 0, .25);
+}
+
+.Principal {
+    padding: 1rem;
+    border: 2px solid rgba(0, 0, 0, .25);
+}
+
+/* Cadastrar Projetos */
+.Login-FieldDescription{
     border: 1px solid rgba(0, 0, 0, .25);
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    width:70%;
+    height: 8rem;
+}
+.Login-FieldName{
+    border: 1px solid rgba(0, 0, 0, .25);
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    padding: 0rem 0.3rem;
+    height: 2rem;
+    width:30%;
+
+}
+.LoginProjeto{
+    border: 1px solid rgba(0, 0, 0, .25);
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 9px;
+    width: 94%;
+    height: 92%;
+    padding: 1rem;
 }

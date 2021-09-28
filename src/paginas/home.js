@@ -15,7 +15,7 @@ const Home = () => {
             id:"0",
             registration: 0,
             role: "ALUMN",
-            username: "Andre"
+            username: "Usuario"
         }
         ]
     }
@@ -27,39 +27,42 @@ const Home = () => {
     return(
         <>
         <div className="header">
-            Colocar um header aq
+            Bem Vindo: {dados.users[0].username}
         </div>
         <div className="info">
             <h1>Informacoes </h1>
-            <p>nome: {dados.users[0].username}</p>
-            
+            <p>nome: {dados.users[0].username}</p> 
         </div>
-        <div>
+        <div className="Principal">
             <h1>Projetos</h1>
-        </div>
 
-        
-        <div className="Modal">
+            <div className="Modal">
             <button className="Btn" onClick = {() => setIsModalVisibleCadastro(true)}>Cadastrar</button>
             {isModalVisibleCadastro ? <CadastrarProjetos onClose = {() => setIsModalVisibleCadastro()}>
                 
-                <h2>Cadastrar</h2>
+                <h2>Cadastrar Projetos</h2>
+
                 
                 </CadastrarProjetos> : null}
-        </div>
-        <br/>
+            </div>
 
-        
-        <div className="Modal">
-            <button className="Btn" onClick = {() => setIsModalVisibleListar(true)}>Listar</button>
-            {isModalVisibleListar ? <ModalListar onClose = {() => setIsModalVisibleListar()}>
-                
-                <h2>listar Projetos</h2>
-                <p>{dados.name}</p>
-                <p className = "descricao">{dados.description}</p>
-                <p className="descricao">alunos: {dados.users[0].username}</p>
-                
-                </ModalListar> : null}
+
+            <br/>
+
+
+
+            <div className="Modal">
+                <button className="Btn" onClick = {() => setIsModalVisibleListar(true)}>Listar</button>
+                {isModalVisibleListar ? <ModalListar onClose = {() => setIsModalVisibleListar()}>
+                    
+                    <h2 className="descricao" >listar Projetos</h2>
+                    <p>{dados.name}</p>
+                    <p className = "">{dados.description}</p>
+                    <p className="descricao">alunos: {dados.users[0].username}</p>
+                    
+                    </ModalListar> : null}
+            </div>
+
         </div>
 
         </>
