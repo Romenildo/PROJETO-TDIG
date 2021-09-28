@@ -1,0 +1,53 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container {
+    padding: 0 0.5rem;
+    background: #fdfdfd;
+    width: 60%;
+    height: 60%;
+    border: 1px solid rgba(0, 0, 0, .25);
+    color: rgba(0, 0, 0, .6);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 9px;
+}
+.close-Btn{
+    background: #00cc99;
+    color: #fdfdfd;
+    padding: .5rem 3rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 50vh;
+}
+.Btn{
+    background: #00cc99;
+    color: #fdfdfd;
+    padding: .5rem 3rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.close-Btn:hover, .Btn:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
+}
+
+.descricao {
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, .25);
+}
+.projetos{
+    border: 1px solid rgba(0, 0, 0, .25);
+}
