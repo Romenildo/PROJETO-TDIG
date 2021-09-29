@@ -1,6 +1,6 @@
 .modal {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     padding: 0 0.5rem;
     background: #fdfdfd;
     width: 60%;
-    height: 60%;
+    margin-bottom: 203px;
     border: 1px solid rgba(0, 0, 0, .25);
     color: rgba(0, 0, 0, .6);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
@@ -30,6 +30,17 @@
     text-decoration: none;
     margin-left: 50vh;
 }
+.Btn-logout{
+    background-color: #009c75;
+    color: #fdfdfd;
+    padding: .4rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    top: -38%;
+    left: 15%;
+}
 .Btn{
     background: #00cc99;
     color: #fdfdfd;
@@ -43,7 +54,7 @@
     font-size: 1.2rem;
 }
 
-.close-Btn:hover, .Btn:hover {
+.close-Btn:hover, .Btn:hover , .Btn-logout:hover{
     cursor: pointer;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
 }

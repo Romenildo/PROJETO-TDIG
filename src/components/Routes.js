@@ -1,7 +1,8 @@
 
 import Login from '../paginas/login'
 import Register from '../paginas/register'
-import Home from '../paginas/home'
+import HomeProfessor from '../paginas/homeProfessor'
+import HomeAluno from "../paginas/homeAluno"
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -17,8 +18,11 @@ const Routes = () => (
                 <Route path="/register">  
                     <Register />
                 </Route>
-                <Route path="/home">  
-                    <Home />
+                <Route path="/homeProfessor">  
+                    <HomeProfessor />
+                </Route>
+                <Route path="/homeAluno">  
+                    <HomeAluno />
                 </Route>
 
                 <Route path="*">

@@ -1,25 +1,28 @@
 import React  from 'react';
 import { Formik, ErrorMessage, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import {Redirect} from 'react-router-dom'
-import axios from 'axios'
 
 import './Formulario.css'
 
 const Login = () => {
-    const handleSubmit = values => {
-        console.log(values)
-        axios.post("https://fast-badlands-00990.herokuapp.com/api/v1/login", values)
-            .then(resp => {
-                const { data } = resp
-                console.log(resp)
-                if (resp.data) {
-                    
-                    //localStorage.setItem('app-token', data)
-                    console.log("Logado com sucesso")
-                    return <Redirect to='/home'/>;
-                }
-            })
+    const handleSubmit = async values => {
+
+        const dados = {
+            password: values.password,
+            username: values.username
+        }
+        alert(JSON.stringify(dados))
+
+        const init = {
+            
+            method: 'POST',
+            headers: {
+                "content-Type": 'application/json'
+            },
+            body: JSON.stringify(dados)
+        }
+        const response = await fetch("https://fast-badlands-00990.herokuapp.com/api/v1/login", init)
+        console.log(response)
     }
 
     const validations = Yup.object().shape({
@@ -32,7 +35,7 @@ const Login = () => {
             <h1 className="centraliza">Login</h1>
             <p>Preencha os dados abaixo</p>
             <Formik
-                initialValues={{}}
+                initialValues={{username:"", password:""}}
                 onSubmit={handleSubmit}
                 validationSchema={validations}
             >

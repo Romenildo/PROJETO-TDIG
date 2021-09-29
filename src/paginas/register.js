@@ -1,35 +1,35 @@
 import React  from 'react';
 import { Formik, ErrorMessage, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import {Redirect, Link} from 'react-router-dom'
-import axios from 'axios'
+import { useHistory } from "react-router-dom";
 import './Modal/modal.css'
 
 
 
 const Register = () => {
-    const handleSubmit = values => {
-        console.log(values)
-        axios.post("https://fast-badlands-00990.herokuapp.com/api/v1/signup", values)
-        .then(resp => {
-            const  data  = resp
-            console.log(resp)
-            resp.data = values
-            console.log(resp)
-            if (resp) {
-                alert("Registrado com sucesso")
-                return <Link to='/'/>;
-            }
-        })
-        
+    const history = useHistory();
+
+    const handleSubmit = async (values) => {
+        const init = {
+            method: 'POST',
+            headers: {
+                "content-Type": 'application/json'
+            },
+            body: JSON.stringify(values)
+        }  
+        const response = await fetch("https://fast-badlands-00990.herokuapp.com/api/v1/signup", init)  
+        //fazer verificacao se é aluno ou professor
+        if(response.ok){
+            alert("Cadastrado com Sucesso")
+            history.push('/');
+        }
     }
 
     const validations = Yup.object().shape({
         username: Yup.string().required('*Required!'),
         password: Yup.string().required('*Required!').min(4, 'Too short!').max(10, 'Too long!'),
         function: Yup.string().required('*Required!'),
-        role: Yup.string().required('*Required!'),
-        registration: Yup.number().required('*Required!')
+        role: Yup.string().required('*Required!')
     })
 
   return (
@@ -97,20 +97,6 @@ const Register = () => {
                         <ErrorMessage
                             component="span"
                             name="role"
-                            className="Login-Error"
-                        />
-                    </div>
-                    <div className="Login-Group">
-                        registration:
-                        <Field
-                            name="registration"
-                            className="Login-Field"
-                        
-                            placeholder="Digite "
-                        />
-                        <ErrorMessage
-                            component="span"
-                            name="registration"
                             className="Login-Error"
                         />
                     </div>

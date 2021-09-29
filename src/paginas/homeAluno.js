@@ -1,11 +1,10 @@
 import React, {useState}from 'react'
-import axios from 'axios'
+
 
 
 import ModalListar from './Modal/listarProjetos'
-import CadastrarProjetos from './Modal/cadastrarProjetos'
 
-const Home = () => {
+const HomeAluno = () => {
 
     const dados = {
         description: "Cadastro de projetos (Um projeto precisa ter, no mínimo: nome e descrição)  somente a partir de um usuário professor Vinculação de alunos somente por um professor (terão diferentes papéis, por exemplo: estágio, júnior, pleno, sênior, master, etc.)",
@@ -21,8 +20,6 @@ const Home = () => {
     }
 
     const [isModalVisibleListar, setIsModalVisibleListar] = useState(false)
-    const [isModalVisibleCadastro, setIsModalVisibleCadastro] = useState(false)
-    
 
     return(
         <>
@@ -35,21 +32,6 @@ const Home = () => {
         </div>
         <div className="Principal">
             <h1>Projetos</h1>
-
-            <div className="Modal">
-            <button className="Btn" onClick = {() => setIsModalVisibleCadastro(true)}>Cadastrar</button>
-            {isModalVisibleCadastro ? <CadastrarProjetos onClose = {() => setIsModalVisibleCadastro()}>
-                
-                <h2>Cadastrar Projetos</h2>
-
-                
-                </CadastrarProjetos> : null}
-            </div>
-
-
-            <br/>
-
-
 
             <div className="Modal">
                 <button className="Btn" onClick = {() => setIsModalVisibleListar(true)}>Listar</button>
@@ -69,4 +51,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default HomeAluno
