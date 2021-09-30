@@ -1,10 +1,12 @@
 import React  from 'react';
 import { Formik, ErrorMessage, Form, Field } from 'formik';
 import * as Yup from 'yup';
-
+import { useHistory } from "react-router-dom";
 import './Formulario.css'
 
 const Login = () => {
+    const history = useHistory();
+
     const handleSubmit = values => {
 
         const dados = {
@@ -13,6 +15,7 @@ const Login = () => {
         }
         alert(JSON.stringify(dados))
 
+        history.push('/homeProfessor');
         const init = {
             
             method: 'POST',

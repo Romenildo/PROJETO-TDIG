@@ -18,7 +18,7 @@ const HomeProfessor = () => {
             id:"0",
             registration: 0,
             role: "ALUMN",
-            username: "Joao"
+            username: "*usuario"
         }
         ]
     }
