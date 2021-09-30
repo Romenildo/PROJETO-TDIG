@@ -7,19 +7,20 @@ const listarProjetos = ( {id = 'modal', onClose = () => {}, children }) => {
         if(e.target.id===id) onClose();
     }
 
-    const carregarProjetos = async ()=>{
-        const response = await fetch("https://fast-badlands-00990.herokuapp.com/api/v1/projects")
-        const dados = await response.json()
-        console.log(dados)
-    }
-    window.onload=()=>{
-        carregarProjetos()
-        console.log("iniciado")
+    const carregarProjetos =()=>{
+        fetch("https://fast-badlands-00990.herokuapp.com/api/v1/projects")
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                console.log(data)
+            })
+
     }
     return (
         <div id = {id} className="modal" onClick= {clicarFora}>
          <div className="container">
-            <button className="close-Btn" onClick= {onClose}>Fechar</button>
+            <button className="close-Btn" onClick= {carregarProjetos()}>Fechar</button>
             <div className="content">{children})</div>
          </div>
         </div>

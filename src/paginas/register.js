@@ -10,6 +10,17 @@ const Register = () => {
     const history = useHistory();
 
     const handleSubmit = async (values) => {
+        
+        const dados = {
+            function: values.function,
+            password: values.password,
+            registration: 0,
+            role: values.role,
+            username: values.username
+        }
+
+        alert(JSON.stringify(dados))
+
         const init = {
             method: 'POST',
             headers: {
@@ -18,6 +29,7 @@ const Register = () => {
             body: JSON.stringify(values)
         }  
         const response = await fetch("https://fast-badlands-00990.herokuapp.com/api/v1/signup", init)  
+        alert(response.body.username)
         //fazer verificacao se é aluno ou professor
         if(response.ok){
             alert("Cadastrado com Sucesso")

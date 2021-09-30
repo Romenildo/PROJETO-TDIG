@@ -35,7 +35,7 @@ const CadastrarProjetos =  ( {id = 'modal', onClose = () => {}, children }) => {
                 "content-Type": 'application/json'
             },
             credentials: 'same-origin',
-            authenticated: true ,
+            authenticated: "true" ,
             body: JSON.stringify(dados)
         }  
         const response = await fetch("https://fast-badlands-00990.herokuapp.com/api/v1/projects", init)  

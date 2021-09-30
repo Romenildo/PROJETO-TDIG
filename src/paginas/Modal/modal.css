@@ -31,15 +31,16 @@
     margin-left: 50vh;
 }
 .Btn-logout{
-    background-color: #009c75;
+    background-color: #00cc99;
     color: #fdfdfd;
     padding: .4rem 1.5rem;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    position: relative;
-    top: -38%;
-    left: 15%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
 }
 .Btn{
     background: #00cc99;

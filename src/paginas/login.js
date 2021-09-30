@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import './Formulario.css'
 
 const Login = () => {
-    const handleSubmit = async values => {
+    const handleSubmit = values => {
 
         const dados = {
             password: values.password,
@@ -21,8 +21,10 @@ const Login = () => {
             },
             body: JSON.stringify(dados)
         }
-        const response = await fetch("https://fast-badlands-00990.herokuapp.com/api/v1/login", init)
-        console.log(response)
+        fetch("https://fast-badlands-00990.herokuapp.com/api/v1/login", init)
+        .then(response => response.json())
+        .then(data=> console.log(data.password))
+        
     }
 
     const validations = Yup.object().shape({
@@ -35,7 +37,7 @@ const Login = () => {
             <h1 className="centraliza">Login</h1>
             <p>Preencha os dados abaixo</p>
             <Formik
-                initialValues={{username:"", password:""}}
+                initialValues={{}}
                 onSubmit={handleSubmit}
                 validationSchema={validations}
             >
