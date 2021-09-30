@@ -5,13 +5,11 @@
    [ROMENILDO DO VALE FERREIRA](https://github.com/Romenildo)
 
 
-## Routes
-   '''
-    /
-    /register
-    /homeProfessor
-    /homeAluno
- '''
+## Routes   
+    /   
+    /register   
+    /homeProfessor   
+    /homeAluno   
 
 ## Login 
 ![](https://github.com/Romenildo/Projeto-TDIG/blob/master/imgsGit/login.JPG)

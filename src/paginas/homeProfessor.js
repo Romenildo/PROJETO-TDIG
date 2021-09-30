@@ -61,7 +61,7 @@ const HomeProfessor = () => {
                         <p className="descricao">alunos: {dados.users[0].username}</p>
                     </div>
                     <div className="projetos">
-                        <p>{dados.name}</p>
+                        <p>Projeto 2</p>
                         <p className = "">{dados.description}</p>
                         <p className="descricao">alunos: {dados.users[0].username}</p>
                     </div>

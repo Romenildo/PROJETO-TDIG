@@ -20,6 +20,7 @@ const listarProjetos = ( {id = 'modal', onClose = () => {}, children }) => {
     return (
         <div id = {id} className="modal" onClick= {clicarFora}>
          <div className="container">
+             {/* aqui devia ser pra fechar mas coloquei carregar projetos para testar a api */}
             <button className="close-Btn" onClick= {carregarProjetos()}>Fechar</button>
             <div className="content">{children})</div>
          </div>
